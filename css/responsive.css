@@ -1,0 +1,60 @@
+@media screen and (min-width: 321px){
+    .keys button{
+        width: 25px;
+        height: 25px;
+    }
+    #category{
+        font-size: 1.3em;  
+    }
+}
+
+@media screen and (min-width: 376px){
+    .keys button{
+        width: 30px;
+        height: 30px;
+    }
+    #secret-words{
+        font-size: 1.3em;
+    }
+    .letters{
+        font-size: 1.2em;    
+        width: 18px;    
+    }
+    #category{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 420px){
+    .keys button{
+        width: 36px;
+        height: 36px;
+    }
+    #secret-words{
+        font-size: 1.5em;
+    }
+    .letters{
+        width: 20px;    
+    }
+    #category{
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .keys button{
+        width: 68px;
+        height: 68px;
+        font-size: 2em; 
+    }
+    #secret-words{
+        font-size: 2.5em;
+    }
+    .letters{
+        font-size: 1.5em;  
+        width: 35px;    
+    }
+    #category{
+        font-size: 2em;  
+    }
+}

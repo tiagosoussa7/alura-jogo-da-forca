@@ -39,12 +39,13 @@ body{
     margin-top: 30px;       
 }
 
-.words{
+.letters{ 
     width: 16px;  
     text-align: center;
     border-bottom: 3px solid rgb(235, 94, 6);
-    margin: 0px 2px 0px 2px;   
-    color: aliceblue;   
+    margin: 0px 4px 0px 4px;   
+    padding: 2px;  
+    color: rgb(223, 105, 32);   
 }
 
 #keyboard{
@@ -72,9 +73,9 @@ body{
 .keys button:hover{
     background-color: rgb(235, 94, 6); 
     color: black;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);  
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);  
 }
 
 #category{
