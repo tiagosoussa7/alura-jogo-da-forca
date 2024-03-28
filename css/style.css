@@ -36,16 +36,17 @@ body{
     align-items: center;
     flex-direction: row;  
     font-size: 1rem;
-    margin-top: 30px;       
+    margin-top: 30px;    
+    color: rgb(223, 105, 32);         
 }
 
 .letters{ 
     width: 16px;  
     text-align: center;
-    border-bottom: 3px solid rgb(235, 94, 6);
     margin: 0px 4px 0px 4px;   
     padding: 2px;  
-    color: rgb(223, 105, 32);   
+    color: rgb(223, 105, 32);      
+    border-bottom: 3px solid rgb(235, 94, 6);   
 }
 
 #keyboard{
@@ -76,6 +77,13 @@ body{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);  
+}
+#key-BTN{
+    background-color: rgb(235, 94, 6);     
+}
+
+#key-BTN i{
+    color: black;  
 }
 
 #category{

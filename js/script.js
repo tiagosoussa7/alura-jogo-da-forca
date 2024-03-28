@@ -1,5 +1,6 @@
 let secret_category_word;
 let secret_aleatory_word;
+let dynamic_list = [];   
 
 const words = [
     word001 = {
@@ -258,4 +259,30 @@ function secret_word() {
 
     console.log(secret_aleatory_word); 
     console.log(secret_category_word); 
+}
+
+screen_word()     
+function screen_word() {
+    const word = document.getElementById("secret-word");
+    word.innerHTML = "";   
+
+    const category = document.getElementById("category");
+    category.innerHTML = secret_category_word;  
+    
+    for( i = 0; i < secret_aleatory_word.length; i++ ){
+        
+        if ( dynamic_list[i] == undefined){
+            
+            dynamic_list[i] = "&nbsp;"   
+            word.innerHTML = word.innerHTML + "<div class='letters'>" + dynamic_list[i] + "</div>"
+            
+        } else {
+            word.innerHTML = word.innerHTML + "<div class='letters'>" + dynamic_list[i] + "</div>"
+        }
+    }    
+}
+
+
+function check_key(key) {
+    
 }
