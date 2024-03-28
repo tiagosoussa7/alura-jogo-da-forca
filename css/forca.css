@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10px;
+    background-color: black; 
+       
+}
+
+.container{     
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column; 
+}
+
+
+#img{
+    background-image: url(../img/forca.png);
+    width: 234px;
+    height: 272px;
+    background-repeat: no-repeat;
+}
+
+#secret-word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;  
+    font-size: 1rem;
+    margin-top: 30px;       
+}
+
+.words{
+    width: 16px;  
+    text-align: center;
+    border-bottom: 3px solid rgb(235, 94, 6);
+    margin: 0px 2px 0px 2px;   
+    color: aliceblue;   
+}
+
+#keyboard{
+    margin-top: 30px;   
+}
+
+.keys button{
+    width: 24px;
+    height: 24px;
+    margin: 2px 2px 7px 2px;   
+    cursor: pointer;    
+    border-radius: 6px;            
+    background-color: black;   
+    box-shadow: 0 0 4px  rgb(235, 94, 6);    
+    border: 1px solid rgb(235, 94, 6);
+    color: rgb(235, 94, 6);      
+    font-weight: 800; 
+    font-family: 'Ubuntu', sans-serif;      
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);         
+}    
+
+.keys button:hover{
+    background-color: rgb(235, 94, 6); 
+    color: black;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);  
+}
+
+#category{
+    margin-top: 30px; 
+    color: rgb(235, 94, 6);   
+    font-size: 1.2em;    
+    font-family: 'Ubuntu', sans-serif;   
+}
