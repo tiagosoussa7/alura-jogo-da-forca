@@ -27,7 +27,7 @@ body{
     background-image: url(../img/forca.png);
     width: 234px;
     height: 272px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
 
 #secret-word{
@@ -37,7 +37,7 @@ body{
     flex-direction: row;  
     font-size: 1rem;
     margin-top: 30px;    
-    color: rgb(223, 105, 32);         
+    color: #f1710f;         
 }
 
 .letters{ 
@@ -45,8 +45,8 @@ body{
     text-align: center;
     margin: 0px 4px 0px 4px;   
     padding: 2px;  
-    color: rgb(223, 105, 32);      
-    border-bottom: 3px solid rgb(235, 94, 6);   
+    color: #f1710f;      
+    border-bottom: 3px solid #f1710f;   
 }
 
 #keyboard{
@@ -60,9 +60,9 @@ body{
     cursor: pointer;    
     border-radius: 6px;            
     background-color: black;   
-    box-shadow: 0 0 4px  rgb(235, 94, 6);    
-    border: 1px solid rgb(235, 94, 6);
-    color: rgb(235, 94, 6);      
+    box-shadow: 0 0 4px  #f1710f;    
+    border: 1px solid #f1710f; 
+    color: #f1710f;      
     font-weight: 800; 
     font-family: 'Ubuntu', sans-serif;      
     transition: all 0.4s ease-in-out 0s;
@@ -72,14 +72,14 @@ body{
 }    
 
 .keys button:hover{
-    background-color: rgb(235, 94, 6); 
-    color: black;
+    color: #000000; 
+    background-color: #f1710f;  
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);  
 }
 #key-BTN{
-    background-color: rgb(235, 94, 6);     
+    background-color: #f1710f;   
 }
 
 #key-BTN i{
@@ -88,7 +88,7 @@ body{
 
 #category{
     margin-top: 30px; 
-    color: rgb(235, 94, 6);   
+    color: #f1710f; 
     font-size: 1.2em;    
     font-family: 'Ubuntu', sans-serif;   
 }

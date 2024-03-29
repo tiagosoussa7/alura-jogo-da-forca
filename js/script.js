@@ -1,6 +1,7 @@
 let secret_category_word;
 let secret_aleatory_word;
 let dynamic_list = [];   
+let attempts = 6;
 
 const words = [
     word001 = {
@@ -165,7 +166,7 @@ const words = [
     },
     word040 = {
         name: "FUSCA",
-        category: "MANGÁ"
+        category: "CARRO"
     },
     word041 = {
         name: "FIAT UNO",
@@ -283,6 +284,68 @@ function screen_word() {
 }
 
 
-function check_key(key) {
-    
+function check_key(letter) {  
+    if ( attempts > 0 ) {
+        change_style("key-" + letter); 
+        compare_list(letter);
+        screen_word(); 
+    } 
+}
+
+function change_style(letter) {
+    document.getElementById(letter).style.background = "#f1710f";
+    document.getElementById(letter).style.color = "#000000";       
+}   
+
+function compare_list(letter) {
+    const position = secret_aleatory_word.indexOf(letter);
+
+    if ( position < 0 ) {
+        attempts--
+        upload_image();  
+
+    } else {
+        for( i = 0; i < secret_aleatory_word.length; i++ ) {
+            if ( secret_aleatory_word[i] ==  letter ) {
+                dynamic_list[i] = letter;
+            }
+        } 
+    }
+
+    let victory = true;
+    for( i = 0; i < secret_aleatory_word.length; i++) {
+       if ( secret_aleatory_word[i] != dynamic_list[i] ) victory = false;
+    }
+
+    if ( victory == true ) {
+
+        attempts = 0;
+    }
+}
+
+
+function upload_image() {
+    switch(attempts){
+        case 5:
+            document.getElementById("img").style.backgroundImage = "url('../img/forca01.png')";
+            break;
+        case 4:
+            document.getElementById("img").style.background = "url('../img/forca02.png')";
+            break;
+        case 3:
+            document.getElementById("img").style.background = "url('../img/forca03.png')";
+            break;
+        case 2:
+            document.getElementById("img").style.background = "url('../img/forca04.png')";
+            break;
+        case 1:
+            document.getElementById("img").style.background = "url('../img/forca05.png')";
+            break;
+        case 0:
+            document.getElementById("img").style.background = "url('../img/forca06.png')";
+            break;
+        default:
+            document.getElementById("img").style.background = "url('../img/forca.png')";
+            break;
+    }
 }
