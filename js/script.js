@@ -177,7 +177,7 @@ const words = [
         category: "CARRO"
     },
     word043 = {
-        name: "CREVROLET ONIX",
+        name: "CHEVROLET ONIX",
         category: "CARRO"
     },
     word044 = {
@@ -241,7 +241,7 @@ const words = [
         category: "TRANSPORTE"
     },
     word059 = {
-        name: "METRÔ",
+        name: "METRO",
         category: "TRANSPORTE"
     },
     word060 = {
@@ -273,33 +273,48 @@ function screen_word() {
     for( i = 0; i < secret_aleatory_word.length; i++ ){
         
         if ( dynamic_list[i] == undefined){
-            
-            dynamic_list[i] = "&nbsp;"   
-            word.innerHTML = word.innerHTML + "<div class='letters'>" + dynamic_list[i] + "</div>"
-            
+            if ( secret_aleatory_word[i] == " ") {
+                dynamic_list[i] = " ";
+                word.innerHTML = word.innerHTML + "<div class='letters-space'>" + dynamic_list[i] + "</div>"
+
+            } else {
+                dynamic_list[i] = "&nbsp;"   
+                word.innerHTML = word.innerHTML + "<div class='letters'>" + dynamic_list[i] + "</div>"
+            }
         } else {
-            word.innerHTML = word.innerHTML + "<div class='letters'>" + dynamic_list[i] + "</div>"
+            if ( secret_aleatory_word[i] == " ") {
+                dynamic_list[i] = " ";
+                word.innerHTML = word.innerHTML + "<div class='letters-space'>" + dynamic_list[i] + "</div>"
+            } else {
+                word.innerHTML = word.innerHTML + "<div class='letters'>" + dynamic_list[i] + "</div>"
+            }
         }
     }    
 }
-
 
 function check_key(letter) {  
     document.getElementById("key-" + letter).disabled = true; 
 
     if ( attempts > 0 ) {
-        change_style("key-" + letter); 
+        change_style("key-" + letter, false); 
         compare_list(letter);
         screen_word(); 
     } 
 }
 
-function change_style(letter) {
-    document.getElementById(letter).style.background = "#f1710f";
-    document.getElementById(letter).style.color = "#000000";       
+function change_style(letter, condition) {
+    if (condition == false) {
+        document.getElementById(letter).style.background = "#881404";
+        document.getElementById(letter).style.color = "#000000";          
+        
+    } else {
+        document.getElementById(letter).style.background = "#f1710f";
+        document.getElementById(letter).style.color = "#000000";       
+        
+    }
 }   
 
-function compare_list(letter) {
+async function compare_list(letter) {
     const position = secret_aleatory_word.indexOf(letter);
 
     if ( position < 0 ) {
@@ -311,6 +326,8 @@ function compare_list(letter) {
         }
 
     } else {
+        change_style("key-" + letter, true); 
+
         for( i = 0; i < secret_aleatory_word.length; i++ ) {
             if ( secret_aleatory_word[i] ==  letter ) {
                 dynamic_list[i] = letter;
@@ -325,7 +342,7 @@ function compare_list(letter) {
 
     if ( victory == true ) {
         open_modal("Parabéns!","Você acertou a palavra.");
-        attempts = 0;
+        attempts = 0;   
     }
 }
 

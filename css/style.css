@@ -49,6 +49,15 @@ body{
     border-bottom: 3px solid #f1710f;   
 }
 
+.letters-space{ 
+    width: 16px;  
+    text-align: center;
+    margin: 0px 4px 0px 4px;   
+    padding: 2px;  
+    color: #f1710f;        
+    color: #881404;        
+}
+
 #keyboard{
     margin-top: 30px;   
 }
@@ -81,12 +90,12 @@ body{
     -ms-transform: scale(1.1);
     transform: scale(1.1);  
 }
-#key-BTN{
-    background-color: #f1710f;   
-}
 
+#key-BTN{
+    background-color: #f1710f;
+}
 #key-BTN i{
-    color: black;  
+    color: black;
 }
 
 #category{
