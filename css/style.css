@@ -71,6 +71,9 @@ body{
     transform: scale(1);         
 }    
 
+.keys button:disabled{
+    cursor: not-allowed;   
+}
 .keys button:hover{
     color: #000000; 
     background-color: #f1710f;  

@@ -285,6 +285,8 @@ function screen_word() {
 
 
 function check_key(letter) {  
+    document.getElementById("key-" + letter).disabled = true; 
+
     if ( attempts > 0 ) {
         change_style("key-" + letter); 
         compare_list(letter);
@@ -302,7 +304,11 @@ function compare_list(letter) {
 
     if ( position < 0 ) {
         attempts--
-        upload_image();  
+        upload_image(); 
+        
+        if ( attempts == 0) {
+            open_modal("Errou!","A palavra correta é <br>" + secret_aleatory_word);
+        }
 
     } else {
         for( i = 0; i < secret_aleatory_word.length; i++ ) {
@@ -318,11 +324,10 @@ function compare_list(letter) {
     }
 
     if ( victory == true ) {
-
+        open_modal("Parabéns!","Você acertou a palavra.");
         attempts = 0;
     }
 }
-
 
 function upload_image() {
     switch(attempts){
@@ -349,3 +354,20 @@ function upload_image() {
             break;
     }
 }
+
+function open_modal(title, message) {
+    let modal_title = document.getElementById("exampleModalLabel");
+    modal_title.innerText = title;
+    
+    let modal_body = document.getElementById("modalBody")   
+    modal_body.innerHTML = message;   
+    
+    $('#myModal').modal({
+        show:true
+    })
+}
+
+let btn = document.getElementById("key-BTN");
+btn.addEventListener("click", function() {
+    location.reload();    
+})
