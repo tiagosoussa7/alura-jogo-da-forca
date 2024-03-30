@@ -349,25 +349,25 @@ async function compare_list(letter) {
 function upload_image() {
     switch(attempts){
         case 5:
-            document.getElementById("img").style.backgroundImage = "url('../img/forca01.png')";
+            document.getElementById("img").style.backgroundImage = "url('assets/forca01.png')";   
             break;
         case 4:
-            document.getElementById("img").style.backgroundImage = "url('../img/forca02.png')";
+            document.getElementById("img").style.backgroundImage = "url('assets/forca02.png')";
             break;
         case 3:
-            document.getElementById("img").style.backgroundImage = "url('../img/forca03.png')";
+            document.getElementById("img").style.backgroundImage = "url('assets/forca03.png')";
             break;
         case 2:
-            document.getElementById("img").style.backgroundImage = "url('../img/forca04.png')";
+            document.getElementById("img").style.backgroundImage = "url('assets/forca04.png')";
             break;
         case 1:
-            document.getElementById("img").style.backgroundImage = "url('../img/forca05.png')";
+            document.getElementById("img").style.backgroundImage = "url('assets/forca05.png')";
             break;
         case 0:
-            document.getElementById("img").style.backgroundImage = "url('../img/forca06.png')";
+            document.getElementById("img").style.backgroundImage = "url('assets/forca06.png')";
             break;
         default:
-            document.getElementById("img").style.backgroundImage = "url('../img/forca.png')";
+            document.getElementById("img").style.backgroundImage = "url('assets/forca.png')";
             break;
     }
 }
